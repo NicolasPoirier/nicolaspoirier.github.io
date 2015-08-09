@@ -1,5 +1,69 @@
 // bower:scss
+@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
+
+@import "variables";
+@import "mixins";
+
+html, body {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+#header {
+  background: $header-color;
+  color: $header-text-color;
+  height: 100%;
+  position: fixed;
+  padding: 48px;
+  text-align: center;
+
+  #avatar {
+    margin-bottom: 24px;
+    width: 128px;
+    heigth: 128px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #about {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    color: $header-text-darker-color;
+  }
+
+  #social-links {    
+    li {
+      display: inline;
+      margin-left: 12px;
+      margin-right: 12px;
+      
+      a {
+        color: $header-text-color;
+        @include transition(color, 0.3s, ease);
+        @include transition(text-shadow, 0.3s, ease);
+      }
+      
+      a:hover {
+        color: white;
+        text-shadow: 0px 0px 4px $header-text-darker-color;
+      }
+    }
+    
+    .fa {
+      font-size: 34px;
+    }
+  }
+}
 
 .browsehappy {
   margin: 0.2em 0;

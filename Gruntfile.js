@@ -338,12 +338,24 @@ module.exports = function (grunt) {
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,jpg}',
+            '.htaccess',
             'images/{,*/}*.webp',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
+        }, {
+          expand: true,
+          cwd: 'bower_components/font-awesome/',
+          src: 'fonts/*',
+          dest: '<%= config.dist %>/'
         }]
+      },
+      serve: {
+        expand: true,
+        cwd: 'bower_components/font-awesome/',
+        src: 'fonts/*',
+        dest: '.tmp/'
       }
     },
 
@@ -374,6 +386,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'copy:serve',
       'wiredep',
       'concurrent:server',
       'postcss',
