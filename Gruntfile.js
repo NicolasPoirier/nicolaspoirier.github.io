@@ -15,7 +15,8 @@ module.exports = function (grunt) {
 
   // Automatically load required grunt tasks
   require('jit-grunt')(grunt, {
-      useminPrepare: 'grunt-usemin'
+      useminPrepare: 'grunt-usemin',
+      buildcontrol: 'grunt-build-control'
   });
 
   // Configurable paths
@@ -356,6 +357,21 @@ module.exports = function (grunt) {
         cwd: 'bower_components/font-awesome/',
         src: 'fonts/*',
         dest: '.tmp/'
+      }
+    },
+    
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: false,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      github: {
+        options: {
+          remote: 'https://github.com/NicolasPoirier/nicolaspoirier.github.io.git',
+          branch: 'master'
+        }
       }
     },
 
