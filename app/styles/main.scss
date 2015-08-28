@@ -8,60 +8,46 @@
 html, body {
   margin: 0;
   font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-  margin: 0;
-  font-size: 34px;
+.accent {
+  color: $accent-text-color;
 }
 
 #header {
-  background: $header-color;
+  background-color: $header-background-color;
+  background-image: url("/images/header.jpg");
   color: $header-text-color;
-  height: 100%;
-  position: fixed;
-  padding: 48px;
-  text-align: center;
-
-  #avatar {
-    margin-bottom: 24px;
-    width: 128px;
-    heigth: 128px;
+  height: 724px;
+  vertical-align: middle;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: table;
+  width: 100%;
+  font-size: 32px;
+  text-shadow: 0 0 2px #000000;
+  
+  #header-content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
   }
   
-  ul {
-    list-style: none;
-    padding: 0;
+  h1 {
+    margin: 0;
+    font-size: 128px;
+    margin-bottom: 28px;
   }
+  
+  p {
+    margin: 0;
+  }
+}
 
-  #about {
-    margin-top: 12px;
-    margin-bottom: 24px;
-    color: $header-text-darker-color;
-  }
-
-  #social-links {    
-    li {
-      display: inline;
-      margin-left: 12px;
-      margin-right: 12px;
-      
-      a {
-        color: $header-text-color;
-        @include transition(color, 0.3s, ease);
-        @include transition(text-shadow, 0.3s, ease);
-      }
-      
-      a:hover {
-        color: white;
-      }
-    }
-    
-    .fa {
-      font-size: 34px;
-    }
-  }
+#content {
+  box-shadow: 0 -2px 4px rgba(50, 50, 50, 0.75);
 }
 
 .browsehappy {
