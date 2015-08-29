@@ -370,7 +370,7 @@ module.exports = function (grunt) {
       },
       github: {
         options: {
-          remote: 'https://github.com/NicolasPoirier/nicolaspoirier.github.io.git',
+          remote: 'origin',
           branch: 'master'
         }
       }
