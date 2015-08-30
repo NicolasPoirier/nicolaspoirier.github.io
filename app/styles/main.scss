@@ -38,7 +38,6 @@ p {
   background-repeat: no-repeat;
   display: table;
   width: 100%;
-  font-size: 32px;
   text-shadow: 0 0 2px #000000;
   
   #header-content {
@@ -49,9 +48,13 @@ p {
   }
   
   h1 {
-    font-size: 128px;
+    font-size: 6.4em;
     font-weight: bold;
     margin-bottom: $main-margin;
+  }
+  
+  p {
+    font-size: 1.6em;
   }
 }
 
