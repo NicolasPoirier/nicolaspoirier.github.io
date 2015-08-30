@@ -7,9 +7,15 @@
 
 body {
   margin: 0;
-  font-size: 20px;
   font-family: 'Open Sans', sans-serif;
   color: $primary-text-color;
+  font-size: 20px;
+  @media(max-width: $small-screen-width-limit) {
+    font-size: 18px;
+  }
+  @media(max-width: $xsmall-screen-width-limit) {
+    font-size: 16px;
+  }
 }
   
 h1 {
@@ -31,11 +37,15 @@ p {
 #header {
   background-color: $header-background-color;
   background-image: url("/images/header.jpg");
-  color: $light-text-color;
-  height: 724px;
-  vertical-align: middle;
   background-position: center center;
   background-repeat: no-repeat;
+  color: $light-text-color;
+  @media(max-height: $small-screen-height-limit) {
+    height: 250px;
+    background-image: url("/images/header_small.jpg");
+  }
+  height: 724px;
+  vertical-align: middle;
   display: table;
   width: 100%;
   text-shadow: 0 0 2px #000000;
@@ -45,24 +55,50 @@ p {
     vertical-align: middle;
     text-align: center;
     text-transform: uppercase;
+    padding: $main-margin;
   }
   
   h1 {
     font-size: 6.4em;
     font-weight: bold;
     margin-bottom: $main-margin;
+    @media(max-width: $small-screen-width-limit) {
+        margin-bottom: $small-main-margin;
+    }
+    @media(max-width: $medium-screen-width-limit) { 
+      font-size: 4.8em;
+    }
   }
   
   p {
     font-size: 1.6em;
   }
+  
+  
+  
+  @media(max-width: $small-screen-width-limit), (max-height: $small-screen-height-limit) {
+    #header-content {
+      padding: 12px;
+    }
+    
+    h1 {
+      font-size: 2em;
+    }
+    
+    p {
+      font-size: 1em;
+    }
+  }
 }
 
 #content {
   box-shadow: 0 -4px 4px -2px rgba(50, 50, 50, 0.75);
-  
-  section {
-    padding: $main-padding;
+}
+
+.content-section {
+  padding: $main-padding;
+  @media(max-width: $small-screen-width-limit) {
+    padding: $small-main-padding;
   }
 }
 
@@ -76,27 +112,35 @@ p {
       text-transform: uppercase;
       text-align: center;
       margin-bottom: $main-margin;
+      @media(max-width: $small-screen-width-limit) {
+        margin-bottom: $small-main-margin;
+      }
     }
     
     p {
       text-align: center;
-      line-height: 1.8;
+      line-height: 1.45;
     }
   }
 
 #footer {
   background-color: $accent-color;
   color: $light-text-color;
-  padding: $main-padding;
   
   #social-links {
     list-style: none;
     padding: 0;
     text-align: center;
     margin: 0 0 $main-margin 0;
+    @media(max-width: $small-screen-width-limit) {
+      margin: 0 0 $small-main-margin 0;
+    }
     
     .li-margin {
       margin-right: $main-margin;
+      @media(max-width: $small-screen-width-limit) {
+        margin-right: $small-main-margin;
+      }
     }
       
     li {
