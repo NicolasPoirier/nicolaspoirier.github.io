@@ -11,15 +11,27 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: $primary-text-color;
 }
+  
+h1 {
+  margin: 0;
+}
+  
+p {
+  margin: 0;
+}
 
 .accent {
-  color: $accent-text-color;
+  color: $accent-color;
+}
+      
+.animated-color {
+  @include transition(color, 0.3s, ease);
 }
 
 #header {
   background-color: $header-background-color;
   background-image: url("/images/header.jpg");
-  color: $header-text-color;
+  color: $light-text-color;
   height: 724px;
   vertical-align: middle;
   background-position: center center;
@@ -37,14 +49,9 @@ body {
   }
   
   h1 {
-    margin: 0;
     font-size: 128px;
     font-weight: bold;
-    margin-bottom: 28px;
-  }
-  
-  p {
-    margin: 0;
+    margin-bottom: $main-margin;
   }
 }
 
@@ -52,27 +59,63 @@ body {
   box-shadow: 0 -4px 4px -2px rgba(50, 50, 50, 0.75);
   
   section {
-    padding: 80px;
+    padding: $main-padding;
   }
-  
-  .section-content {
+}
+
+.content-box {
     margin: auto;
     max-width: 1000px;
+    
+    h1 {
+      font-size: $title-text-size;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: $main-margin;
+    }
+    
+    p {
+      text-align: center;
+      line-height: 1.8;
+    }
   }
+
+#footer {
+  background-color: $accent-color;
+  color: $light-text-color;
+  padding: $main-padding;
   
-  h1 {
-    margin: 0;
-    font-size: 48px;
-    font-weight: normal;
-    text-transform: uppercase;
+  #social-links {
+    list-style: none;
+    padding: 0;
     text-align: center;
-    margin-bottom: 28px;
-  }
-  
-  p {
-    margin: 0;
-    text-align: center;
-    line-height: 1.8;
+    margin: 0 0 $main-margin 0;
+    
+    .li-margin {
+      margin-right: $main-margin;
+    }
+      
+    li {
+      display: inline;
+      font-size: $title-text-size;
+      
+      a {
+        color: $light-text-color;
+      }
+      
+      a:hover {
+        .fa-linkedin {
+          color: #0177B5;
+        }
+        .fa-github {
+          color: #323131;
+        }
+        .fa-twitter {
+          color: #5EA9DD;
+        }
+      }
+    }
   }
 }
 
