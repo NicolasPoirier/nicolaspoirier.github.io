@@ -13,6 +13,9 @@ body {
   @media(max-width: $small-screen-width-limit) {
     font-size: 16px;
   }
+  @media(max-width: $xsmall-screen-width-limit) {
+    font-size: 14px;
+  }
 }
   
 h1 {
@@ -140,9 +143,13 @@ p {
 }
 
 .entry-left {
-  flex: 0 0 auto;
+  flex: 0 0 165px;
   padding: $secondary-margin 0 $secondary-margin 0;
   text-align: right;
+  
+  @media(max-height: $small-screen-height-limit), (max-width: $small-screen-width-limit) {
+      flex-basis: 110px;
+    }
 }
 
 .entry-company {
@@ -158,12 +165,23 @@ p {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: $secondary-margin;
+  
+  @media(max-width: $small-screen-width-limit) {
+    font-size: 1.1em;
+  }
 }
 
 .entry-left-separator {
   width: 110px;
-  margin-left: 55px;
-  border-bottom: 1px solid #E1E1E1;  
+  margin-left:auto;
+  margin-right:0;
+  border-bottom: 1px solid #E1E1E1;
+  
+  @media(max-width: $small-screen-width-limit) {
+    width: 60px;
+    margin-left:auto;
+    margin-right:0;
+  }
 }
 
 .entry-info {
