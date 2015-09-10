@@ -56,14 +56,11 @@ p {
   }
   
   h1 {
-    font-size: 6.4em;
+    font-size: 6em;
     font-weight: bold;
     margin-bottom: $main-margin;
     @media(max-width: $small-screen-width-limit) {
         margin-bottom: $small-main-margin;
-    }
-    @media(max-width: $medium-screen-width-limit) { 
-      font-size: 4.8em;
     }
   }
   
@@ -90,6 +87,10 @@ p {
   box-shadow: 0 -4px 4px -2px rgba(50, 50, 50, 0.75);
 }
 
+.even-content {
+  background-color: $even-content-background-color
+}
+
 .content-section {
   padding: $main-padding;
   @media(max-width: $small-screen-width-limit) {
@@ -98,28 +99,96 @@ p {
 }
 
 .content-box {
-    margin: auto;
-    max-width: 768px;
-    
-    h1 {
-      font-size: $title-text-size;
-      font-weight: normal;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: $main-margin;
-      @media(max-width: $small-screen-width-limit) {
-        margin-bottom: $small-main-margin;
-      }
-      @media(max-height: $small-screen-height-limit), (max-width: $small-screen-width-limit) {
-        font-size: $small-title-text-size;
-      }
+  margin: auto;
+  max-width: 768px;
+  
+  h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  
+  .section-title {
+    font-size: $title-text-size;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: $main-margin;
+    @media(max-width: $small-screen-width-limit) {
+      margin-bottom: $small-main-margin;
     }
-    
-    p {
-      text-align: center;
-      line-height: 1.45;
+    @media(max-height: $small-screen-height-limit), (max-width: $small-screen-width-limit) {
+      font-size: $small-title-text-size;
     }
   }
+  
+  p {
+    line-height: 1.45;
+  }
+}
+
+.content-center {
+  text-align: center;
+}
+
+.entry {
+  padding: $secondary-margin 0 $secondary-margin 0;
+  display: flex;
+  flex-flow: row;
+}
+
+.entry-title {
+  font-size: 1.1em;
+}
+
+.entry-left {
+  flex: 0 0 auto;
+  padding: $secondary-margin 0 $secondary-margin 0;
+  text-align: right;
+}
+
+.entry-company {
+  margin-top: $secondary-margin;
+}
+
+.entry-place {
+  color: $secondary-text-color;
+}
+
+.entry-date {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: $secondary-margin;
+}
+
+.entry-left-separator {
+  width: 110px;
+  margin-left: 55px;
+  border-bottom: 1px solid #E1E1E1;  
+}
+
+.entry-info {
+  margin-top: $main-margin;
+  font-variant: small-caps;
+  color: $secondary-text-color;
+}
+
+.entry-description-extended {
+  margin-top: $secondary-margin;
+}
+
+.entry-content {
+  margin-left: $main-margin;
+  padding: $secondary-margin 0 $secondary-margin $main-margin;
+  border-left: 1px solid #E1E1E1;
+  
+  h1 {
+    margin-bottom: $secondary-margin;
+  }
+  
+  ul {
+    margin: 0;
+  }
+}
 
 #footer {
   background-color: $accent-color;
