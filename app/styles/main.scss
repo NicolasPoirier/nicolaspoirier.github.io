@@ -69,6 +69,7 @@ p {
   
   p {
     font-size: 1.6em;
+    font-family: 'Oswald', sans-serif;
   }
   
   @media(max-width: $small-screen-width-limit), (max-height: $small-screen-height-limit) {
@@ -108,6 +109,7 @@ p {
   h1 {
     font-weight: normal;
     text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
   }
   
   .section-title {
@@ -140,6 +142,7 @@ p {
 
 .entry-title {
   font-size: 1.1em;
+  font-family: 'Oswald', sans-serif;
 }
 
 .entry-left {
@@ -147,7 +150,7 @@ p {
   padding: $secondary-margin 0 $secondary-margin 0;
   text-align: right;
   
-  @media(max-height: $small-screen-height-limit), (max-width: $small-screen-width-limit) {
+  @media(max-width: $small-screen-width-limit) {
       flex-basis: 110px;
     }
 }
@@ -165,9 +168,10 @@ p {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: $secondary-margin;
+  font-family: 'Oswald', sans-serif;
   
   @media(max-width: $small-screen-width-limit) {
-    font-size: 1.1em;
+    font-size: 1.4em;
   }
 }
 
