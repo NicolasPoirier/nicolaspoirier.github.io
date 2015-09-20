@@ -138,6 +138,11 @@ p {
   padding: $secondary-margin 0 $secondary-margin 0;
   display: flex;
   flex-flow: row;
+  
+  a {
+    color: $secondary-text-color;
+    text-decoration: none;
+  }
 }
 
 .entry-title {
