@@ -98,7 +98,7 @@ p {
 .content-section {
   padding: $main-padding;
   @media(max-width: $small-screen-width-limit) {
-    padding: $small-main-padding;
+    padding: $small-main-padding-vertical $small-main-padding-horizontal;
   }
 }
 
