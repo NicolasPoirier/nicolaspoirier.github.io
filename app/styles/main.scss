@@ -143,6 +143,10 @@ p {
     color: $secondary-text-color;
     text-decoration: none;
   }
+  
+  a:hover {
+    color: $darker-secondary-text-color;
+  }
 }
 
 .entry-title {
