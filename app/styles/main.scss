@@ -41,10 +41,10 @@ p {
   background-repeat: no-repeat;
   color: $light-text-color;
   @media(max-height: $small-screen-height-limit), (max-width: $small-screen-width-limit) {
-    height: 250px;
+    height: 240px;
     background-image: url("/images/header_small.jpg");
   }
-  height: 724px;
+  height: 640px;
   vertical-align: middle;
   display: table;
   width: 100%;
