@@ -155,13 +155,13 @@ p {
 }
 
 .entry-left {
-  flex: 0 0 165px;
+  flex: 0 0 176px;
   padding: $secondary-margin 0 $secondary-margin 0;
   text-align: right;
   
   @media(max-width: $small-screen-width-limit) {
-      flex-basis: 110px;
-    }
+      flex-basis: 128px;
+  }
 }
 
 .entry-company {
@@ -185,13 +185,13 @@ p {
 }
 
 .entry-left-separator {
-  width: 110px;
+  width: 144px;
   margin-left:auto;
   margin-right:0;
   border-bottom: 1px solid #E1E1E1;
   
   @media(max-width: $small-screen-width-limit) {
-    width: 73px;
+    width: 96px;
     margin-left:auto;
     margin-right:0;
   }
