@@ -34,7 +34,87 @@ p {
   @include transition(color, 0.3s, ease);
 }
 
-#header {
+#top-nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: $nav-background-color;
+  justify-content: center;
+}
+  
+nav{
+  display: flex;
+  align-items: center;
+}
+  
+.nav-item, .nav-toggle {
+  text-decoration: none;
+  color: $light-text-color;
+  padding: $small-main-margin;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+#nav-empty {
+  display: none;
+}
+  
+#top-nav a:hover {
+  background-color: $nav-item-hover-background-color;
+  color: $accent-color;
+}
+
+@media (hover: none) {
+  #top-nav a:hover {
+    color: $light-text-color;
+    background-color: transparent;
+  }
+
+  #top-nav a:active {
+    background-color: $nav-item-hover-background-color;
+    color: $accent-color;
+  }
+}
+  
+.nav-toggle {
+  display: none;
+}
+  
+@media screen and (max-width: $small-screen-width-limit) {
+  #top-nav, nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .nav-item-show {
+    display: flex;
+    background-color: $nav-background-color-responsive;
+  }
+  
+  .nav-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+  }
+  
+  #nav-empty:before {
+    content: "\200b";
+  }
+  
+  #nav-empty {
+    display: flex;
+  }
+}
+
+header {
   background-color: $header-background-color;
   background-image: url("/images/header.jpg");
   background-position: center center;
@@ -48,7 +128,6 @@ p {
   vertical-align: middle;
   display: table;
   width: 100%;
-  text-shadow: 0 0 2px #000000;
   
   #header-content {
     display: table-cell;
@@ -56,6 +135,7 @@ p {
     text-align: center;
     text-transform: uppercase;
     padding: $main-margin;
+    text-shadow: 0 0 2px #000000;
   }
   
   h1 {
@@ -226,7 +306,7 @@ p {
   }
 }
 
-#footer {
+footer {
   background-color: $accent-color;
   color: $light-text-color;
   

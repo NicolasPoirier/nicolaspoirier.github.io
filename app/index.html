@@ -27,16 +27,30 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    
-    <header id="header">
+    <header>
       <div id="header-content">
         <h1>Nicolas <span class="accent">Poirier</span></h1>
         <p>Computer engineer · Amateur pastry cook</p>
       </div>
     </header>
     
+    <div id="top-nav">
+      <div class="nav-item" id="nav-empty"></div>
+      <a href="javascript:void(0);" class="nav-toggle" onclick="toggleNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <nav>
+        <a href="#about-me" class="nav-item">About me</a>
+        <a href="#my-projects" class="nav-item">My projects</a>
+        <a href="#given-trainings" class="nav-item">Given trainings</a>
+        <a href="#my-education" class="nav-item">My education</a>
+        <a href="#my-certifications" class="nav-item">My certifications</a>
+        <a href="#contacts" class="nav-item">Contacts</a>
+      </nav>
+    </div>
+    
     <div id="content">
-      <section class="content-section">
+      <section class="content-section" id="about-me">
         <div class="content-box">
           <h1 class="section-title">About <span class="accent">me</span></h1>
           <p class="content-center">
@@ -44,7 +58,7 @@
           </p>
         </div>
         </section>
-      <section class="content-section even-content">
+      <section class="content-section even-content" id="my-projects">
         <div class="content-box">
           <h1 class="section-title">My <span class="accent">projects</span></h1>
           <article class="entry">
@@ -351,7 +365,7 @@ labor cost...).
           </article>
         </div>
       </section>
-      <section class="content-section">
+      <section class="content-section" id="given-trainings">
         <div class="content-box">
           <h1 class="section-title">Given <span class="accent">Trainings</span></h1>
           <article class="entry">
@@ -417,7 +431,7 @@ labor cost...).
           </article>
         </div>
       </section>
-      <section class="content-section even-content">
+      <section class="content-section even-content" id="my-education">
         <div class="content-box">
           <h1 class="section-title">My <span class="accent">education</span></h1>
           <article class="entry">
@@ -450,7 +464,7 @@ labor cost...).
           </article>
         </div>
       </section>
-      <section class="content-section">
+      <section class="content-section" id="my-certifications">
         <div class="content-box">
           <h1 class="section-title">My <span class="accent">Certifications</span></h1>
           <article class="entry">
@@ -863,7 +877,7 @@ labor cost...).
         </div>
       </section>
     </div>
-    <footer id="footer" class="content-section">
+    <footer id="contacts" class="content-section">
       <div class="content-box">
         <ul id="social-links">
           <li class="li-margin">
@@ -889,7 +903,6 @@ labor cost...).
     <!-- endbuild -->
 
     
-
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
@@ -903,7 +916,19 @@ labor cost...).
 
       ga('create', 'UA-66162026-1', 'auto');
       ga('send', 'pageview');
-
+      
+      function toggleNav() {
+        const navs = document.querySelectorAll('nav')
+        navs.forEach(nav => {
+            nav.classList.toggle('nav-item-show');
+            if(nav.classList.contains('nav-item-show')) {
+              nav.addEventListener('click', toggleNav, false);
+            } else {
+              nav.removeEventListener('click', toggleNav)
+            }
+        });
+        document.getElementById('nav-empty').classList.toggle('nav-item-show');
+      }
     </script>
   </body>
 </html>
