@@ -37,7 +37,7 @@
     <div id="top-nav">
       <div class="nav-item" id="nav-empty"></div>
       <a href="javascript:void(0);" class="nav-toggle" onclick="toggleNav()">
-        <i class="fa fa-bars"></i>
+        <i id="nav-toggle-icon" class="fa fa-bars"></i>
       </a>
       <nav>
         <a href="#about-me" class="nav-item">About me</a>
@@ -921,13 +921,22 @@ labor cost...).
         const navs = document.querySelectorAll('nav')
         navs.forEach(nav => {
             nav.classList.toggle('nav-item-show');
-            if(nav.classList.contains('nav-item-show')) {
+            if (nav.classList.contains('nav-item-show')) {
               nav.addEventListener('click', toggleNav, false);
             } else {
               nav.removeEventListener('click', toggleNav)
             }
         });
-        document.getElementById('nav-empty').classList.toggle('nav-item-show');
+        const navEmpty = document.getElementById('nav-empty');
+        const navToggleIcon = document.getElementById('nav-toggle-icon');
+        
+        navEmpty.classList.toggle('nav-item-show');
+        
+        if (navEmpty.classList.contains('nav-item-show')) {
+          navToggleIcon.className = "fa fa-times";
+        } else {
+          navToggleIcon.className = "fa fa-bars";
+        }
       }
     </script>
   </body>
