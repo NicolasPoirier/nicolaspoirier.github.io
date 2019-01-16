@@ -46,7 +46,9 @@ p {
   
 nav{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
   
 .nav-item, .nav-toggle {
@@ -279,6 +281,12 @@ header {
 
 .entry-info {
   margin-top: $main-margin;
+  font-variant: small-caps;
+  color: $secondary-text-color;
+}
+
+.entry-info-small {
+  margin-top: $xsmall-main-margin;
   font-variant: small-caps;
   color: $secondary-text-color;
 }
