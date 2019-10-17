@@ -300,11 +300,21 @@ header {
   color: $secondary-text-color;
 }
 
-.entry-content {
+.entry-content-divider {
   margin-left: $main-margin;
   padding: $secondary-margin 0 $secondary-margin $main-margin;
   border-left: 1px solid #E1E1E1;
   
+  h1 {
+    margin-bottom: $secondary-margin;
+  }
+  
+  ul {
+    margin: 0;
+  }
+}
+
+.entry-content {  
   h1 {
     margin-bottom: $secondary-margin;
   }
