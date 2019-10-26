@@ -58,15 +58,23 @@ nav{
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
   text-align: center;
-}
-
-.nav-toggle {
-  font-size: 24px;
+  border-radius: $small-main-margin + 24px;
 }
 
 #nav-empty {
   display: none;
+  border-radius: 0px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+#nav-toggle-icon {
+  width: 24px;
+  height: 24px;
   font-size: 24px;
+  border-radius: 24px;
 }
   
 #top-nav a:hover {
@@ -79,10 +87,6 @@ nav{
     color: $light-text-color;
     background-color: transparent;
   }
-}
-  
-.nav-toggle {
-  display: none;
 }
   
 @media screen and (max-width: $small-screen-width-limit) {
