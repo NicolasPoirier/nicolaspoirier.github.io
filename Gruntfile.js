@@ -165,6 +165,7 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
+        implementation: require('node-sass'),
         sourceMap: true,
         sourceMapEmbed: true,
         sourceMapContents: true,
@@ -195,8 +196,8 @@ module.exports = function (grunt) {
         map: true,
         processors: [
           // Add vendor prefixed styles
-          require('autoprefixer-core')({
-            browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
+          require('autoprefixer')({
+            browsers: ['> 1%', 'last 2 versions']
           })
         ]
       },
@@ -360,7 +361,7 @@ module.exports = function (grunt) {
         dest: '.tmp/'
       }
     },
-    
+
     buildcontrol: {
       options: {
         dir: 'dist',
@@ -393,7 +394,6 @@ module.exports = function (grunt) {
       ]
     }
   });
-
 
   grunt.registerTask('serve', 'start the server and preview your app', function (target) {
 
