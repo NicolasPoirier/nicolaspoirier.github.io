@@ -18,7 +18,7 @@ body {
   }
 }
   
-h1 {
+h1, h2 {
   margin: 0;
 }
   
@@ -192,7 +192,7 @@ header {
   margin: auto;
   max-width: 768px;
   
-  h1 {
+  h1, h2 {
     font-weight: normal;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
@@ -237,7 +237,6 @@ header {
 
 .entry-title {
   font-size: 1.1em;
-  font-family: 'Oswald', sans-serif;
 }
 
 .entry-left {
@@ -313,7 +312,7 @@ header {
   padding: $secondary-margin 0 $secondary-margin $main-margin;
   border-left: 1px solid #E1E1E1;
   
-  h1 {
+  h2 {
     margin-bottom: $secondary-margin;
   }
   
@@ -323,7 +322,7 @@ header {
 }
 
 .entry-content {  
-  h1 {
+  h2 {
     margin-bottom: $secondary-margin;
   }
   
