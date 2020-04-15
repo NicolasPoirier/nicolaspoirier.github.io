@@ -57,8 +57,7 @@ nav{
   text-decoration: none;
   color: $light-text-color;
   padding: $small-main-margin;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', sans-serif;
   text-align: center;
   border-radius: $small-main-margin + 24px;
 }
@@ -141,7 +140,6 @@ header {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    text-transform: uppercase;
     padding: $main-margin;
     text-shadow: 0 0 2px #000000;
   }
@@ -157,7 +155,7 @@ header {
   
   p {
     font-size: 1.6em;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
   
   @media(max-width: $small-screen-width-limit), (max-height: $small-screen-height-limit) {
@@ -196,8 +194,7 @@ header {
   
   h1, h2 {
     font-weight: normal;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
   
   .section-title {
@@ -262,9 +259,8 @@ header {
 .entry-date {
   font-size: 1.6em;
   font-weight: bold;
-  text-transform: uppercase;
   margin-bottom: $secondary-margin;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', sans-serif;
   
   @media(max-width: $small-screen-width-limit) {
     font-size: 1.4em;
