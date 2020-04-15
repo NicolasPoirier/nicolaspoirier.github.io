@@ -54,323 +54,45 @@
       <section class="content-section even-content" id="my-projects">
         <div class="content-box">
           <h1 class="section-title">My <span class="accent">projects</span></h1>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date">2017 - <span class="accent">2020</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">Veolia Recyclage et Valorisation des Déchets</p>
-              <p class="entry-place">Aubervilliers, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Wave</h2>
-              <div class="entry-description-small">
-                <p>
-                  Tech Lead, Scrum Master and UX/UI Designer in an agile DevOps team. I initiated and carried out the transition from Scrum to Scrumban and from Java to Kotlin, the use of Continuous Delivery and Test Driven Development, and an UX/UI redesign.
+          {%- for project in page.projects -%}
+            <article class="entry">
+              <div class="entry-left">
+                <p class="entry-date">
+                  {%- if project.start_date != project.end_date -%}
+                    {{ project.start_date }} -&nbsp;
+                  {%- endif -%} 
+                  <span class="accent">{{ project.end_date }}</span>
                 </p>
+                <div class="entry-left-separator"></div>
+                <p class="entry-company accent">{{ project.company }}</p>
+                <p class="entry-place">{{ project.place }}</p>
               </div>
-              <div class="entry-description-extended">
-                <p>
-                  Wave is an Android application, used by drivers who collect waste, to dematerialize the reporting of their work. The operation center has a real-time view of the situation.
-                </p>
+              <div class="entry-content-divider">
+                <h2 class="entry-title">{{ project.name }}</h2>
+                <div class="entry-description-small">
+                  <p>
+                    {{ project.role }}
+                  </p>
+                </div>
+                <div class="entry-description-extended">
+                  <p>
+                    {{ project.description | markdownify }}
+                  </p>
+                </div>
+                <div class="entry-description-extended-bis">
+                  <p>
+                    {{ project.skills | join: ', ' | replace : ' ', '&nbsp;' }}
+                  </p>
+                </div>
+                <div class="entry-info">
+                  <p><i class="fa fa-users"></i>&nbsp;{{ project.team_size }}&emsp;<i class="far fa-clock"></i>&nbsp;{{ project.duration | replace: ' ', '&nbsp;' }}
+                    {%- if project.link_uri -%}
+                      &emsp;<a href="{{ project.link_uri }}" title="{{ project.link_text }}" class="animated-color"><i class="fa fa-link"></i>&nbsp;{{ project.link_text }}</a></p>
+                    {%- endif -%} 
+                </div>
               </div>
-              <div class="entry-description-extended-bis">
-                <p>Agile, Scrumban, Scrum, CI/CD, TDD, Kotlin, Clean Architecture, MVI, RxJava 2, Dagger 2, Retrofit 2, Butterknife</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;10&emsp;<i class="far fa-clock"></i></i>&nbsp;2&nbsp;years and 8 months</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date"><span class="accent">2017</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">LafargeHolcim</p>
-              <p class="entry-place">Clamart, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Edgar</h2>
-              <div class="entry-description-small">
-                <p>
-                  Tech lead, Scrum Master, Product Owner and UX/UI Designer. I developed the Android mobile application and the backend. I set up an agile workflow to work with the concrete business unit. Directly connected to the business, I was responsible for Product Backlog management.
-                </p>
-              </div>
-              <div class="entry-description-extended">
-                <p>
-                  LafargeHolcim innovates in concrete by offering products with special properties. Although these products are more expensive than common concrete, benefits are there: less labor, less working time...
-                  Salesmen have to convince their clients of the benefits. This is the purpose of Edgar, an Android application, that compares the global cost of the different products with information regarding the work to do (surface, 
-labor cost...).
-                </p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>Agile, Clean Architecture, RxJava 2, Dagger 2, Retrofit 2, Butterknife, Spring Boot, Google OAuth 2</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;2&emsp;<i class="far fa-clock"></i>&nbsp;7&nbsp;months</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date">2016 - <span class="accent">2017</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">LafargeHolcim</p>
-              <p class="entry-place">Clamart, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">eBL</h2>
-              <div class="entry-description-small">
-                <p>
-                  Maintenance of the existing Android application and addition of new features like push instead of polling.
-                </p>
-              </div>
-              <div class="entry-description-extended">
-                <p>
-                  eBL is the application used by drivers who carry LafargeHolcim's products to serve as a dematerialized delivery order.
-                </p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>Agile, Scrum, RxJava 2, Retrofit 2, Butterknife, Firebase Cloud Messaging</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;6&emsp;<i class="far fa-clock"></i>&nbsp;2&nbsp;months</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date"><span class="accent">2016</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">Excilys</p>
-              <p class="entry-place">Cachan, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Kanopee</h2>
-              <div class="entry-description-small">
-                <p>
-                  Tech lead. UX/UI design and development of the application, Android and backend. I was directly connected to the CEO.
-                </p>
-              </div>
-              <div class="entry-description-extended">
-                <p>
-                  Kanopee is an application using a predictive knowledge of the air quality to estimate user exposure to pollutants. It aims to choose the best place and the best time for user activities.
-                </p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>RxJava 1, Dagger 2, Retrofit 2, Butterknife, Mapbox Android SDK, Spring Boot, PostGIS</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;2&emsp;<i class="far fa-clock"></i>&nbsp;4&nbsp;months</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date">2015 - <span class="accent">2016</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">JCDecaux</p>
-              <p class="entry-place">Plaisir, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Cyclomobile</h2>
-              <div class="entry-description-small">
-                <p>UX/UI design and development of the application.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>
-                  Cyclocity is a self-service bicycle system available in many cities all around the world. Cyclomobile is the Android application used by Cyclocity maintenance staff.
-                </p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>RxJava 1, Dagger 2, Retrofit 1, Butterknife, Google Maps API v2</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;1&emsp;<i class="far fa-clock"></i>&nbsp;4&nbsp;months</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date"><span class="accent">2015</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">JCDecaux</p>
-              <p class="entry-place">Plaisir, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Weather</h2>
-              <div class="entry-description-small">
-                <p>UX/UI design of the application.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>An Android application which displays 3-days weather forecast. It is deployed on tactile screens embedded into JCDecaux’s furnitures.</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;2&emsp;<i class="far fa-clock"></i>&nbsp;1&nbsp;week</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date"><span class="accent">2015</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">JCDecaux</p>
-              <p class="entry-place">Plaisir, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Feed</h2>
-              <div class="entry-description-small">
-                <p>UX/UI design and development of the application.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>An Android application which displays a grid of small articles coming from RSS feeds. It is deployed on tactile screens embedded into JCDecaux’s furnitures.</p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>Kotlin, RxJava 1, Retrofit 1, Picasso</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;2&emsp;<i class="far fa-clock"></i>&nbsp;2&nbsp;weeks</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date"><span class="accent">2015</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">JCDecaux</p>
-              <p class="entry-place">Plaisir, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Nearby</h2>
-              <div class="entry-description-small">
-                <p>UX/UI design and development of the application using Google Directions API, Google Places API and an API to get POIs.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>
-                  An Android application which displays points of interest (POI) on a map. It allows user to get information about a POI and to get transit, walking, biking or driving direction to it. It is deployed on tactile screens embedded into JCDecaux’s furnitures.
-                </p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>RxJava 1, Dagger 2, Retrofit 1, Butterknife, Picasso, Google Maps API v2, Java Client for Google Maps Services</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;2&emsp;<i class="far fa-clock"></i>&nbsp;1&nbsp;month</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date"><span class="accent">2015</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">JCDecaux</p>
-              <p class="entry-place">Plaisir, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">TilesView</h2>
-              <div class="entry-description-small">
-                <p>Development of the library.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>An Android widget that is able to display a very huge image and make it browsable by cutting them in small tiles. It is used in Directory project to display indoor maps.</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;2&emsp;<i class="far fa-clock"></i>&nbsp;1&nbsp;month&emsp;<a href="https://github.com/JoanZapata/tilesview" title="TilesView" class="animated-color"><i class="fa fa-link"></i>&nbsp;GitHub</a></p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date">2014 - <span class="accent">2015</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">JCDecaux</p>
-              <p class="entry-place">Plaisir, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Directory</h2>
-              <div class="entry-description-small">
-                <p>Development of the Android application.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>A directory application deployed on interactive kiosks in airports and shopping malls.</p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>RxJava 1, Dagger 2, Retrofit 1, Butterknife, Picasso, Google Maps API v2, Java Client for Google Maps Services</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;1&emsp;<i class="far fa-clock"></i>&nbsp;2&nbsp;years</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date"><span class="accent">2014</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">JCDecaux</p>
-              <p class="entry-place">Plaisir, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Livetouch Launcher</h2>
-              <div class="entry-description-small">
-                <p>Development of the launcher to easily customize UI. Applications to display come from a webservice and are managed via a web administration interface.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>A customizable Android launcher deployed on tactile screens embedded into JCDecaux’s furnitures. Launcher UI is easily customizable depending on client.</p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>Retrofit 1, Butterknife, Picasso</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;1&emsp;<i class="far fa-clock"></i>&nbsp;1&nbsp;month</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date"><span class="accent">2013</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">Samsung</p>
-              <p class="entry-place">Paris, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Samsung Campus</h2>
-              <div class="entry-description-small">
-                <p>Development of the Android application and the Java backend.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>
-                  An Android application used by Samsung to promote the Galaxy Note series and its S Pen during conferences. Tablets are lent to about fifty people composing the audience. The speaker can send content to the audience and interacts with it via its own tablet.
-                </p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>AndroidAnnotations, SQLite, Samsung S Pen SDK, Spring</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;4&emsp;<i class="far fa-clock"></i>&nbsp;2&nbsp;months</p>
-              </div>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-left">
-              <p class="entry-date">2012 - <span class="accent">2013</span></p>
-              <div class="entry-left-separator"></div>
-              <p class="entry-company accent">Excilys</p>
-              <p class="entry-place">Cachan, France</p>
-            </div>
-            <div class="entry-content-divider">
-              <h2 class="entry-title">Capico</h2>
-              <div class="entry-description-small">
-                <p>Development of the Android application and the Java backend.</p>
-              </div>
-              <div class="entry-description-extended">
-                <p>A digital workbook with lessons and exercises for students, and a real-time feedback for teachers.</p>
-              </div>
-              <div class="entry-description-extended-bis">
-                <p>AndroidAnnotations, SQLite, Spring</p>
-              </div>
-              <div class="entry-info">
-                <p><i class="fa fa-users"></i>&nbsp;4&emsp;<i class="far fa-clock"></i>&nbsp;1&nbsp;year</p>
-              </div>
-            </div>
-          </article>
+            </article>
+          {%- endfor -%}
         </div>
       </section>
       <section class="content-section" id="my-education">
@@ -1181,12 +903,12 @@ labor cost...).
           </article>
           <article class="entry">
             <div>
-              <h2 class="entry-title">Steve Jobs</h2>
+              <h2 class="entry-title">Steve projects</h2>
               <div class="entry-description-small accent">
                 <p>Walter Isaacson</p>
               </div>
               <div class="entry-info-small">
-                <p><a href="https://www.simonandschuster.com/books/Steve-Jobs/Walter-Isaacson/9781451648539" title="Simon & Schuster" class="animated-color"><i class="fa fa-link"></i>&nbsp;Simon & Schuster</a></p>
+                <p><a href="https://www.simonandschuster.com/books/Steve-projects/Walter-Isaacson/9781451648539" title="Simon & Schuster" class="animated-color"><i class="fa fa-link"></i>&nbsp;Simon & Schuster</a></p>
               </div>
             </div>
           </article>

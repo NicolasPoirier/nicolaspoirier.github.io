@@ -298,6 +298,10 @@ header {
 
 .entry-description-extended {
   margin-top: $secondary-margin;
+
+  p {
+    margin: $secondary-margin 0 0;
+  }
 }
 
 .entry-description-extended-bis {
