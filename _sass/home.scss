@@ -46,20 +46,19 @@ p {
   justify-content: center;
 }
   
-nav{
+nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
   
-.nav-item, .nav-toggle {
+.nav-item, #nav-toggle {
   text-decoration: none;
   color: $light-text-color;
-  padding: $small-main-margin;
-  font-family: 'Lato', sans-serif;
+  padding: $xsmall-main-margin;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
-  border-radius: $small-main-margin + 24px;
 }
 
 #nav-empty {
@@ -67,7 +66,7 @@ nav{
   border-radius: 0px;
 }
 
-.nav-toggle {
+#nav-toggle {
   display: none;
 }
 
@@ -79,14 +78,16 @@ nav{
 }
   
 #top-nav a:hover {
-  background-color: $nav-item-active-background-color;
-  color: $accent-color;
+  border-bottom: $nav-underline-height solid $light-text-color;
+  margin-bottom: -$nav-underline-height;
 }
 
 @media (hover: none) {
   #top-nav a:hover {
     color: $light-text-color;
     background-color: transparent;
+    border-bottom: none;
+    margin-bottom: 0px;
   }
 }
   
@@ -95,6 +96,8 @@ nav{
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
+    border-bottom: none;
+    margin-bottom: 0px;
   }
   
   nav {
@@ -106,7 +109,7 @@ nav{
     background-color: $nav-background-color-responsive;
   }
   
-  .nav-toggle {
+  #nav-toggle {
     align-self: flex-end;
     display: initial;
     position: absolute;
@@ -147,6 +150,7 @@ header {
   h1 {
     font-size: 6em;
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
     margin-bottom: $main-margin;
     @media(max-width: $small-screen-width-limit) {
         margin-bottom: $small-main-margin;
@@ -155,7 +159,7 @@ header {
   
   p {
     font-size: 1.6em;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   
   @media(max-width: $small-screen-width-limit), (max-height: $small-screen-height-limit) {
