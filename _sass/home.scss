@@ -19,14 +19,6 @@ body {
     font-size: 14px;
   }
 }
-  
-h1, h2 {
-  margin: 0;
-}
-  
-p {
-  margin: 0;
-}
 
 .accent {
   color: $accent-color;
@@ -165,7 +157,12 @@ header {
     }
   }
   
+  h1, h2 {
+    margin: 0;
+  }
+    
   p {
+    margin: 0;
     font-size: 1.6em;
     font-family: 'Open Sans', sans-serif;
   }
@@ -214,6 +211,7 @@ header {
 }
 
 .entry-subtitle {
+  color: $accent-color;
   margin: 0;
 }
 
@@ -271,6 +269,10 @@ header {
   @media(max-width: $small-screen-width-limit) {
       flex-basis: auto;
   }
+
+  p {
+    margin: 0;
+  }
 }
 
 .entry-company {
@@ -282,10 +284,7 @@ header {
 
 .entry-place {
   color: $secondary-text-color;
-}
-
-.entry-subtitle-2 {
-  color: $secondary-text-color;
+  margin: 0;
 }
 
 .entry-date {
@@ -305,10 +304,6 @@ header {
 
 .entry-description {
   margin-top: $secondary-margin;
-}
-
-.entry-subtitle {
-  color: $accent-color;
 }
 
 .entry-right {
