@@ -230,7 +230,7 @@ header {
   font-weight: normal;
   text-align: center;
   font-family: 'Lato', sans-serif;
-  margin-bottom: $large-margin;
+  margin: 0 0 $large-margin 0;
   @media(max-width: $small-screen-width-limit) {
     margin-bottom: $small-main-margin;
   }
@@ -240,11 +240,12 @@ header {
 }
 
 .content-center {
+  margin: 0;
   text-align: center;
 }
 
 .entry-margin {
-  padding: $secondary-margin 0 $secondary-margin 0;
+  margin: $main-margin 0 0 0;
 }
 
 .entry {
