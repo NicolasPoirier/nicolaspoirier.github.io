@@ -244,7 +244,7 @@ educations:
     link_uri: https://www.coursera.org/specializations/investment-management-python-machine-learning
     description: |
       In progress
-      
+
       - Introduction to Portfolio Construction and Analysis with Python
       - Advanced Portfolio Construction and Analysis with Python
       - Python and Machine Learning for Asset Management
@@ -652,31 +652,37 @@ given_trainings:
   - name: Clean Architecture
     date: 2017
     organization: Excilys
+    place: Cachan, France
     duration: 1 hours
 
   - name: Mobile applications
     date: 2017
     organization: ENSIIE
+    place: Evry, France
     duration: 1 hours
 
   - name: Mobile applications (with Android)
     date: 2016
     organization: Master 2, ei.CESI Nancy
+    place: Nancy, France
     duration: 3 hours
 
   - name: Mobile applications (with Android)
     date: 2016
     organization: Master 2, Fondements de l'Informatique et Ingéniérie du Logiciel, Université Paris-Saclay
+    place: Orsay, France
     duration: 3 hours
 
   - name: Android
     date: 2013
     organization: Excilys
+    place: Cachan, France
     duration: 2 days
 
   - name: OOP / Java / Android
     date: 2013
     organization: Master 1, Management des Technologies de l'Information et de la Communication, EPF - École d'ingénieur-e-s
+    place: Sceaux, France
     duration: 7 days
 
 articles:
