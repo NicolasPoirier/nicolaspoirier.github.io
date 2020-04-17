@@ -6,7 +6,7 @@ projects:
     start_date: 2017
     end_date: 2020
     company: Veolia Recyclage et Valorisation des Déchets
-    place: Aubervilliers, France
+    place: Aubervilliers
     team_size: 10
     duration: 2 years 8 months
     skills:
@@ -30,7 +30,7 @@ projects:
     start_date: 2017
     end_date: 2017
     company: LafargeHolcim
-    place: Clamart, France
+    place: Clamart
     team_size: 2
     duration: 7 months
     skills:
@@ -53,7 +53,7 @@ projects:
     start_date: 2016
     end_date: 2017
     company: LafargeHolcim
-    place: Clamart, France
+    place: Clamart
     team_size: 6
     duration: 2 months
     skills:
@@ -69,7 +69,7 @@ projects:
     start_date: 2016
     end_date: 2016
     company: Kanopee City
-    place: Cachan, France
+    place: Cachan
     team_size: 2
     duration: 4 months
     skills:
@@ -90,7 +90,7 @@ projects:
     start_date: 2015
     end_date: 2016
     company: JCDecaux
-    place: Plaisir, France
+    place: Plaisir
     team_size: 3
     duration: 4 months
     skills:
@@ -106,7 +106,7 @@ projects:
     start_date: 2015
     end_date: 2015
     company: JCDecaux
-    place: Plaisir, France
+    place: Plaisir
     team_size: 2
     duration: 1 week
     skills:
@@ -121,7 +121,7 @@ projects:
     start_date: 2015
     end_date: 2015
     company: JCDecaux
-    place: Plaisir, France
+    place: Plaisir
     team_size: 2
     duration: 2 weeks
     skills:
@@ -138,7 +138,7 @@ projects:
     start_date: 2015
     end_date: 2015
     company: JCDecaux
-    place: Plaisir, France
+    place: Plaisir
     team_size: 2
     duration: 1 month
     skills:
@@ -156,7 +156,7 @@ projects:
     start_date: 2015
     end_date: 2015
     company: JCDecaux
-    place: Plaisir, France
+    place: Plaisir
     team_size: 2
     duration: 1 month
     link_text: GitHub
@@ -172,7 +172,7 @@ projects:
     start_date: 2014
     end_date: 2015
     company: JCDecaux
-    place: Plaisir, France
+    place: Plaisir
     team_size: 1
     duration: 2 years
     skills:
@@ -187,7 +187,7 @@ projects:
     start_date: 2014
     end_date: 2014
     company: JCDecaux
-    place: Plaisir, France
+    place: Plaisir
     team_size: 2
     duration: 1 month
     skills:
@@ -203,7 +203,7 @@ projects:
     start_date: 2013
     end_date: 2013
     company: Samsung
-    place: Paris, France
+    place: Paris
     team_size: 4
     duration: 2 months
     skills:
@@ -220,7 +220,7 @@ projects:
     start_date: 2012
     end_date: 2013
     company: Excilys
-    place: Cachan, France
+    place: Cachan
     team_size: 4
     duration: 1 year
     skills:
@@ -571,7 +571,7 @@ educations:
     start_date: 2007
     end_date: 2012
     organization: Polytech Paris-Sud
-    place: Orsay, France
+    place: Orsay
     duration: 5 years
     link_text: Polytech Paris-Sud
     link_uri: http://www.polytech.u-psud.fr/fr/index.html
@@ -652,37 +652,37 @@ given_trainings:
   - name: Clean Architecture
     date: 2017
     organization: Excilys
-    place: Cachan, France
+    place: Cachan
     duration: 1 hours
 
   - name: Mobile applications
     date: 2017
     organization: ENSIIE
-    place: Evry, France
+    place: Evry
     duration: 1 hours
 
   - name: Mobile applications (with Android)
     date: 2016
     organization: Master 2, ei.CESI Nancy
-    place: Nancy, France
+    place: Nancy
     duration: 3 hours
 
   - name: Mobile applications (with Android)
     date: 2016
     organization: Master 2, Fondements de l'Informatique et Ingéniérie du Logiciel, Université Paris-Saclay
-    place: Orsay, France
+    place: Orsay
     duration: 3 hours
 
   - name: Android
     date: 2013
     organization: Excilys
-    place: Cachan, France
+    place: Cachan
     duration: 2 days
 
   - name: OOP / Java / Android
     date: 2013
     organization: Master 1, Management des Technologies de l'Information et de la Communication, EPF - École d'ingénieur-e-s
-    place: Sceaux, France
+    place: Sceaux
     duration: 7 days
 
 articles:

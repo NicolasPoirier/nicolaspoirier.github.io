@@ -73,8 +73,7 @@
                 <p class="entry-subtitle">
                   {{ project.roles | join: ' - ' }}
                 </p>
-                <p class="entry-company">{{ project.company }}</p>
-                <p class="entry-place">{{ project.place }}</p>
+                <p class="entry-subtitle-2">{{ project.company }}, {{ project.place }}</p>
                 <div class="entry-description">
                   {{ project.description | markdownify }}
                 </div>
