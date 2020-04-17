@@ -68,13 +68,13 @@ nav {
 
 #nav-toggle {
   display: none;
+  border-radius: 100em;
 }
 
 #nav-toggle-icon {
   width: 24px;
   height: 24px;
   font-size: 24px;
-  border-radius: 24px;
 }
   
 #top-nav a:hover {
@@ -96,8 +96,17 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
+  }
+
+  #top-nav a:hover {
     border-bottom: none;
     margin-bottom: 0px;
+  }
+
+  @media (hover: hover) {
+    #top-nav a:hover {
+      background-color: $select-background-color;
+    }
   }
   
   nav {
@@ -144,7 +153,6 @@ header {
     vertical-align: middle;
     text-align: center;
     padding: $main-margin;
-    text-shadow: 0 0 2px #000000;
   }
   
   h1 {
@@ -195,17 +203,34 @@ header {
 .content-box {
   margin: auto;
   max-width: 768px;
+  line-height: 1.45;
   
-  h1, h2 {
+  .entry-title {
     font-weight: normal;
     font-family: 'Lato', sans-serif;
+    margin: 0;
+  }
+
+  .entry-subtitle {
+    margin: 0;
+  }
+
+  .entry-subtitle-2 {
+    color: $secondary-text-color;
+    margin: 0;
+  }
+
+  .entry-tags {
+    margin-top: $small-main-margin;
+    color: $secondary-text-color;
   }
   
   .section-title {
     font-size: $title-text-size;
     font-weight: normal;
     text-align: center;
-    margin-bottom: $main-margin;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: $large-margin;
     @media(max-width: $small-screen-width-limit) {
       margin-bottom: $small-main-margin;
     }
@@ -213,21 +238,20 @@ header {
       font-size: $small-title-text-size;
     }
   }
-  
-  p {
-    line-height: 1.45;
-  }
 }
 
 .content-center {
   text-align: center;
 }
 
-.entry {
+.entry-margin {
   padding: $secondary-margin 0 $secondary-margin 0;
+}
+
+.entry {
   display: flex;
   flex-flow: row;
-  
+
   a {
     color: $secondary-text-color;
     text-decoration: none;
@@ -239,7 +263,7 @@ header {
 }
 
 .entry-title {
-  font-size: 1.1em;
+  font-size: 1.25em;
 }
 
 .entry-left {
@@ -253,22 +277,24 @@ header {
 }
 
 .entry-company {
-  margin-top: $secondary-margin;
+  color: $secondary-text-color;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
 }
 
 .entry-place {
   color: $secondary-text-color;
 }
 
+.entry-subtitle-2 {
+  color: $secondary-text-color;
+}
+
 .entry-date {
-  font-size: 1.6em;
+  font-size: 1.25em;
   font-weight: bold;
-  margin-bottom: $secondary-margin;
   font-family: 'Lato', sans-serif;
-  
-  @media(max-width: $small-screen-width-limit) {
-    font-size: 1.4em;
-  }
 }
 
 .entry-left-separator {
@@ -285,18 +311,11 @@ header {
 }
 
 .entry-info {
-  margin-top: $main-margin;
-  font-variant: small-caps;
+  margin-top: $small-main-margin;
   color: $secondary-text-color;
 }
 
-.entry-info-small {
-  margin-top: $xsmall-main-margin;
-  font-variant: small-caps;
-  color: $secondary-text-color;
-}
-
-.entry-description-extended {
+.entry-description-extended, .entry-description {
   margin-top: $secondary-margin;
 
   p {
@@ -310,17 +329,13 @@ header {
 }
 
 .entry-subtitle {
-  color: $secondary-text-color;
+  color: $accent-color;
 }
 
-.entry-content-divider {
+.entry-right {
   margin-left: $main-margin;
   padding: $secondary-margin 0 $secondary-margin $main-margin;
   border-left: 1px solid #E1E1E1;
-  
-  h2 {
-    margin-bottom: $secondary-margin;
-  }
   
   ul {
     margin: 0;

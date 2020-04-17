@@ -3,14 +3,18 @@ $header-background-color: #0D3D62;
 $nav-background-color: transparent;
 $nav-background-color-responsive: $header-background-color;
 $accent-color: #FF6E40;
-$primary-text-color: #212121;
-$secondary-text-color: #757575;
+$primary-text-color: #000000DE;
+$secondary-text-color: #0000008A;
 $darker-secondary-text-color: #333333;
 $even-content-background-color: #F6F6F6;
+$tag-background-color: #232F341F;
+$tag-text-color: #232F34;
+$select-background-color: #ffffff42;
 
 $main-padding: 80px;
 $small-main-padding-vertical: 28px;
 $small-main-padding-horizontal: 16px;
+$large-margin: 44px;
 $main-margin: 28px;
 $small-main-margin: 16px;
 $xsmall-main-margin: 8px;
@@ -19,7 +23,7 @@ $secondary-margin: 16px;
 $title-text-size: 2.4em;
 $small-title-text-size: 1.6em;
 
-$nav-underline-height: 4px;
+$nav-underline-height: 2px;
 
 $xsmall-screen-width-limit: 400px;
 $small-screen-width-limit: 600px;
