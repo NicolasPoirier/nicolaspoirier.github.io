@@ -235,14 +235,16 @@ projects:
 
 educations:
   - name: Investment Management with Python and Machine Learning Specialization
-    start_date: In progress
-    end_date: In progress
+    start_date: 2020
+    end_date: 2020
     organization: EDHEC Business School
     place: Coursera
     duration: 82 hours
     link_text: Coursera
     link_uri: https://www.coursera.org/specializations/investment-management-python-machine-learning
     description: |
+      In progress
+      
       - Introduction to Portfolio Construction and Analysis with Python
       - Advanced Portfolio Construction and Analysis with Python
       - Python and Machine Learning for Asset Management

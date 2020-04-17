@@ -33,8 +33,8 @@
         <a href="#about-me" class="nav-item">About me</a>
         <a href="#my-projects" class="nav-item">My projects</a>
         <a href="#my-education" class="nav-item">My education</a>
-        <a href="#received-recommendations" class="nav-item">Received recommendations</a>
         <a href="#given-trainings" class="nav-item">Given trainings</a>
+        <a href="#received-recommendations" class="nav-item">Received recommendations</a>
         <a href="#written-articles" class="nav-item">Written articles</a>
         <a href="#read-books" class="nav-item">Read books</a>
         <a href="#attended-meetups" class="nav-item">Attended meetups</a>
@@ -60,6 +60,8 @@
                 <p class="entry-date">
                   {%- if project.start_date != project.end_date -%}
                     {{ project.start_date }} -&nbsp;
+                  {%- else -%}
+                    <span class="entry-date-hidden">{{ project.start_date }} -&nbsp;</span>
                   {%- endif -%}
                   <span class="accent">{{ project.end_date }}</span>
                 </p>
@@ -101,6 +103,8 @@
                 <p class="entry-date">
                   {%- if education.start_date != education.end_date -%}
                     {{ education.start_date }} -&nbsp;
+                  {%- else -%}
+                    <span class="entry-date-hidden">{{ education.start_date }} -&nbsp;</span>
                   {%- endif -%}
                   <span class="accent">{{ education.end_date }}</span>
                 </p>
@@ -127,7 +131,27 @@
           {%- endfor -%}
         </div>
       </section>
-      <section class="content-section even-content" id="received-recommendations">
+      <section class="content-section even-content" id="given-trainings">
+        <div class="content-box">
+          <h2 class="section-title">Given <span class="accent">Trainings </span></h2>
+          {%- for given_training in page.given_trainings -%}
+            <article class="entry">
+              <div class="entry-left">
+                <p class="entry-date">
+                  <span class="entry-date-hidden">{{ given_training.date }} -&nbsp;</span><span class="accent">{{ given_training.date }}</span></p>
+              </div>
+              <div class="entry-right">
+                <h3 class="entry-title">{{ given_training.name }}</h3>
+                <p class="entry-subtitle">{{ given_training.organization }}</p>
+                <div class="entry-info">
+                  <p><i class="far fa-clock"></i>&nbsp{{ given_training.duration }}</p>
+                </div>
+              </div>
+            </article>
+          {%- endfor -%}
+        </div>
+      </section>
+      <section class="content-section" id="received-recommendations">
         <div class="content-box">
           <h2 class="section-title">Received <span class="accent">Recommendations </span></h2>
           {%- for recommandation in page.recommandations -%}
@@ -141,25 +165,6 @@
                 </div>
                 <div class="entry-info">
                   <p><a href="https://www.linkedin.com/in/nicolas-poirier-0b579441/" title="LinkedIn" class="animated-color"><i class="fa fa-link"></i>&nbsp;LinkedIn</a>&emsp;<a href="{{ recommandation.profile_link_url }}" title="{{ recommandation.profile_link_text }}" class="animated-color"><i class="fa fa-link"></i>&nbsp;{{ recommandation.profile_link_text }}</a></p>
-                </div>
-              </div>
-            </article>
-          {%- endfor -%}
-        </div>
-      </section>
-      <section class="content-section" id="given-trainings">
-        <div class="content-box">
-          <h2 class="section-title">Given <span class="accent">Trainings </span></h2>
-          {%- for given_training in page.given_trainings -%}
-            <article class="entry">
-              <div class="entry-left">
-                <p class="entry-date"><span class="accent">{{ given_training.date }}</span></p>
-              </div>
-              <div class="entry-right">
-                <h3 class="entry-title">{{ given_training.name }}</h3>
-                <p class="entry-subtitle">{{ given_training.organization }}</p>
-                <div class="entry-info">
-                  <p><i class="far fa-clock"></i>&nbsp{{ given_training.duration }}</p>
                 </div>
               </div>
             </article>

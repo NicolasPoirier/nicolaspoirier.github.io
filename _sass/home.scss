@@ -267,12 +267,12 @@ header {
 }
 
 .entry-left {
-  flex: 0 0 176px;
+  flex: 0 0 auto;
   padding: $secondary-margin 0 $secondary-margin 0;
   text-align: right;
   
   @media(max-width: $small-screen-width-limit) {
-      flex-basis: 128px;
+      flex-basis: auto;
   }
 }
 
@@ -297,17 +297,8 @@ header {
   font-family: 'Lato', sans-serif;
 }
 
-.entry-left-separator {
-  width: 144px;
-  margin-left:auto;
-  margin-right:0;
-  border-bottom: 1px solid #E1E1E1;
-  
-  @media(max-width: $small-screen-width-limit) {
-    width: 96px;
-    margin-left:auto;
-    margin-right:0;
-  }
+.entry-date-hidden {
+  visibility: hidden;
 }
 
 .entry-info {
@@ -315,17 +306,12 @@ header {
   color: $secondary-text-color;
 }
 
-.entry-description-extended, .entry-description {
+.entry-description {
   margin-top: $secondary-margin;
 
   p {
-    margin: $secondary-margin 0 0;
+    margin: 0 0 $secondary-margin 0;
   }
-}
-
-.entry-description-extended-bis {
-  margin-top: $secondary-margin;
-  color: $secondary-text-color;
 }
 
 .entry-subtitle {
