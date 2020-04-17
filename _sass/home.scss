@@ -204,39 +204,40 @@ header {
   margin: auto;
   max-width: 768px;
   line-height: 1.45;
-  
-  .entry-title {
-    font-weight: normal;
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-  }
+}
 
-  .entry-subtitle {
-    margin: 0;
-  }
+.entry-title {
+  font-weight: normal;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  font-size: 1.25em;
+}
 
-  .entry-subtitle-2 {
-    color: $secondary-text-color;
-    margin: 0;
-  }
+.entry-subtitle {
+  margin: 0;
+}
 
-  .entry-tags {
-    margin-top: $small-main-margin;
-    color: $secondary-text-color;
+.entry-subtitle-2 {
+  color: $secondary-text-color;
+  margin: 0;
+}
+
+.entry-tags {
+  margin-top: $small-main-margin;
+  color: $secondary-text-color;
+}
+
+.section-title {
+  font-size: $title-text-size;
+  font-weight: normal;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: $large-margin;
+  @media(max-width: $small-screen-width-limit) {
+    margin-bottom: $small-main-margin;
   }
-  
-  .section-title {
-    font-size: $title-text-size;
-    font-weight: normal;
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    margin-bottom: $large-margin;
-    @media(max-width: $small-screen-width-limit) {
-      margin-bottom: $small-main-margin;
-    }
-    @media(max-height: $small-screen-height-limit), (max-width: $small-screen-width-limit) {
-      font-size: $small-title-text-size;
-    }
+  @media(max-height: $small-screen-height-limit), (max-width: $small-screen-width-limit) {
+    font-size: $small-title-text-size;
   }
 }
 
@@ -260,10 +261,6 @@ header {
   a:hover {
     color: $darker-secondary-text-color;
   }
-}
-
-.entry-title {
-  font-size: 1.25em;
 }
 
 .entry-left {
@@ -308,10 +305,6 @@ header {
 
 .entry-description {
   margin-top: $secondary-margin;
-
-  p {
-    margin: 0 0 $secondary-margin 0;
-  }
 }
 
 .entry-subtitle {
@@ -322,20 +315,6 @@ header {
   margin-left: $main-margin;
   padding: $secondary-margin 0 $secondary-margin $main-margin;
   border-left: 1px solid #E1E1E1;
-  
-  ul {
-    margin: 0;
-  }
-}
-
-.entry-content {  
-  h2 {
-    margin-bottom: $secondary-margin;
-  }
-  
-  ul {
-    margin: 0;
-  }
 }
 
 footer {
