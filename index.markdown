@@ -807,7 +807,7 @@ social_links:
     icon: fa-github
     
   - link_text: LinkedIn Nicolas Poirier
-    link_url: https://www.linkedin.com/in/nicolas-poirier-0b579441/
+    link_url: https://www.linkedin.com/in/poirier-nicolas/
     icon: fa-linkedin
     
   - link_text: Medium Nicolas Poirier
