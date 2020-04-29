@@ -686,6 +686,11 @@ given_trainings:
     duration: 7 days
 
 articles:
+  - title: Understanding problems is a key to better innovations
+    subtitle: Discovering, defining and sharing problems worth solving
+    date: Apr 28, 2020
+    link_text: Medium
+    link_url: https://medium.com/@nicolaspoirier91/understanding-problems-is-a-key-to-better-innovations-896b5e623be7
   - title: An effective daily meeting to help your team move in the right direction
     subtitle: How 10–15 minutes every day allow your team to be synchronized and to plan daily work?
     date: Oct 21, 2019
