@@ -234,6 +234,19 @@ projects:
       Development of the Android application and the Java backend.
 
 educations:
+  - name: "Effective Communication: Writing, Design, and Presentation Specialization"
+    start_date: 2020
+    end_date: 2020
+    organization: University of Colorado Boulder
+    place: Coursera
+    duration: 58 hours
+    link_text: Coursera
+    link_uri: https://www.coursera.org/specializations/effective-business-communication
+    description: |
+      - Business Writing
+      - Graphic Design
+      - Successful Presentation
+      
   - name: Investment Management with Python and Machine Learning Specialization
     start_date: 2020
     end_date: 2020
