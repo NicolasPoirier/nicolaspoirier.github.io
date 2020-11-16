@@ -699,6 +699,11 @@ given_trainings:
     duration: 7 days
 
 articles:
+  - title: Intelligence artificielle en bref
+    subtitle: Optimiser, Automatiser, Diagnostiquer, Prédire, Prescrire
+    date: Nov 16, 2020
+    link_text: Infographic
+    link_url: https://nicolaspoirier.com/assets/images/ai_infographic.png
   - title: Understanding problems is a key to better innovations
     subtitle: Discovering, defining and sharing problems worth solving
     date: Apr 28, 2020
