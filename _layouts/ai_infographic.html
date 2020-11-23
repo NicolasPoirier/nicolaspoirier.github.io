@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nicolas Poirier | Intelligence Artificielle en bref : Optimiser, Automatiser, Diagnostiquer, Prédire, Prescrire</title>
+    <meta name="author" content="Nicolas Poirier">
+    <meta name="description" content="Infographie au sujet de l'intelligence artificielle. Intelligence artificielle, Machine Learning, Réseau de neurones, Deep Learning, Système Expert. Que signifient ces mots qui sont partout ?">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="canonical" href="https://nicolaspoirier.com/">
+    <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg">
+    <link rel="apple-touch-icon" type="image/jpg" href="/apple-touch-icon.jpg">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <a href="/">
+      <header>
+        <div id="header-content">
+          <h1>Nicolas <span class="accent">Poirier</span></h1>
+          <p>Computer engineer · Product lover · Amateur pastry cook</p>
+        </div>
+      </header>
+    </a>
+    <main class="infographic">
+      <img alt="Infographie au sujet de l'intelligence artificielle : Machine Learning, Réseau de neurones, Deep Learning, Système Expert" src="/assets/images/ai_infographic.png">
+    </main>
+    <footer class="content-section">
+      <div class="content-box">
+        <ul id="social-links">
+          {%- for social_link in page.social_links -%}
+            <li class="li-margin">
+              <a href="{{ social_link.link_url }}" rel="me" title="{{ social_link.link_text }}"><i class="fab {{ social_link.icon }} animated-color"></i></a>
+            </li>
+          {%- endfor -%}
+        </ul>
+        <p class="content-center">
+          Nicolas Poirier
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

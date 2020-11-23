@@ -703,7 +703,7 @@ articles:
     subtitle: Optimiser, Automatiser, Diagnostiquer, Prédire, Prescrire
     date: Nov 16, 2020
     link_text: Infographic
-    link_url: https://nicolaspoirier.com/assets/images/ai_infographic.png
+    link_url: /articles/intelligence_artificielle_en_bref_optimiser_automatiser_diagnostiquer_predire_prescrire
   - title: Understanding problems is a key to better innovations
     subtitle: Discovering, defining and sharing problems worth solving
     date: Apr 28, 2020
