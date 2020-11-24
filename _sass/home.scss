@@ -311,6 +311,11 @@ header {
   text-align: center;
 }
 
+.infographic img {
+  max-width: 100%;
+  height: auto;
+}
+
 footer {
   background-color: $accent-color;
   color: $light-text-color;
