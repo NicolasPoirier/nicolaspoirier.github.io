@@ -779,7 +779,7 @@ books:
     link_text: Abrams ComicArts
     link_url: https://www.abramsbooks.com/product/economix_9780810988392/
 
-  - title: Le capitale au XXIe siècle
+  - title: Le capital au XXIe siècle
     authors: 
       - Thomas Piketty
     link_text: Seuil
